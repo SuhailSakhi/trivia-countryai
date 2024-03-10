@@ -71,7 +71,7 @@ app.post('/randomFact', async (req, res) => {
 
        const prompt = `Provide a fact about ${countryName} from ${region} as if you are a ${personality} so people can guess which country it is make the fact funny. (example, if you were a cave man: "Me tell you 'bout land with big drink called beer and flat food called waffles. 
             In big village, there be statue of little boy doing pee-pee. Where this land be? Me not know!") Remember, NEVER mention the name of the Country in your response!`;
-       
+
         const response = await model.invoke(prompt);
         const content = response.content;
 
@@ -80,6 +80,8 @@ app.post('/randomFact', async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
+
+
 
 // Endpoint to evaluate the user's answer
 app.post('/evaluateAnswer', async (req, res) => {
