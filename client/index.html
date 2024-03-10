@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fact Guessing Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-red-600 to-blue-700 min-h-screen flex items-center justify-center">
+<div class="max-w-lg mx-auto p-8 bg-white rounded-lg shadow-lg">
+    <h1 class="text-3xl font-bold mb-4 text-center text-gray-800">Country trivia</h1>
+    <!-- HTML-element om de punten weer te geven -->
+    <p class="text-gray-800">Punten: <span id="points" class="font-bold">0</span></p>
+    <div id="start-section" class="flex flex-wrap items-start justify-center mb-4">
+        <div class="flex flex-col mr-4">
+            <label for="personality" class="mb-2 block text-gray-800">Enter the desired personality:</label>
+            <input type="text" id="personality" class="border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:border-blue-500">
+        </div>
+        <div class="flex flex-col">
+            <p class="mb-2 text-gray-800">Select a region to start the game:</p>
+            <select id="region" class="border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:border-blue-500">
+                <!-- Options will be populated dynamically -->
+            </select>
+        </div>
+    </div>
+
+    <form id="regionForm" class="mb-8">
+        <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Start Game</button>
+    </form>
+
+    <div id="factBox" class="bg-white border border-gray-300 rounded-md p-4 mb-4 hidden">
+        <p id="fact" class="text-lg font-bold text-gray-800"></p>
+        <form id="factForm">
+            <input type="hidden" id="countryValue">
+            <input type="text" id="answer" placeholder="Enter your answer" class="border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:border-blue-500">
+            <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Submit</button>
+        </form>
+    </div>
+</div>
+
+<!-- Add the flag image element here -->
+<img id="flag" class="block mx-auto mb-4 w-70 h-auto rounded-md shadow-lg" style="display: none;">
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
+
