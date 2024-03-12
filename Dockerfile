@@ -13,7 +13,7 @@ RUN npm install
 # Copy the rest of the server's source code
 COPY server/ ./
 
-# Copy client application to a directory within /usr/src/app
+# Copy client application to the /app directory
 COPY client/ ./client/
 
 # Expose the port your app runs on
