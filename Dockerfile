@@ -2,7 +2,7 @@
 FROM node:18
 
 # Create app directory
-WORKDIR /app
+WORKDIR /app/server
 
 # Copy server's package.json and package-lock.json
 COPY server/package*.json ./
