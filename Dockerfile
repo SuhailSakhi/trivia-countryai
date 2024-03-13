@@ -2,22 +2,22 @@
 FROM node:18
 
 # Create app directory
-WORKDIR /app/server
+WORKDIR /app
 
 # Copy server's package.json and package-lock.json
-COPY server/package*.json ./
+COPY chatbot_project/package*.json ./server/
 
 # Install server dependencies
-RUN npm install
+RUN cd server && npm install
 
-# Copy the rest of the server's source code
-COPY server/ ./
+# Copy the server's source code
+COPY chatbot_project/server/ ./server/
 
 # Copy client application to the /app directory
-COPY client/ ./client/
+COPY chatbot_project/client/ ./client/
 
 # Expose the port your app runs on
 EXPOSE 3000
 
 # Specify the command to run your app
-CMD ["node", "server.js"]
+CMD ["node", "server/server.js"]
