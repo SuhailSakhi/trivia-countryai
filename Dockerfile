@@ -5,7 +5,7 @@ FROM node:18
 WORKDIR /app
 
 # Copy server's package.json and package-lock.json
-COPY chatbot_project/package*.json ./server/
+COPY chatbot_project/server/package*.json ./server/
 
 # Install server dependencies
 RUN cd server && npm install
