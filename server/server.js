@@ -33,7 +33,7 @@ const model = new ChatOpenAI({
 
 // Route to handle root URL
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join('../client/index.html'));
 });
 
 // Definieer een variabele om de punten bij te houden
