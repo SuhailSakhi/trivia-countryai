@@ -16,6 +16,9 @@ COPY chatbot_project/server/ ./server/
 # Copy client application to the /app directory
 COPY chatbot_project/client/ ./client/
 
+# Copy index.html from the client directory to the server directory
+COPY chatbot_project/client/index.html ./server/
+
 # Expose the port your app runs on
 EXPOSE 3000
 
