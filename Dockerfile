@@ -11,7 +11,7 @@ COPY chatbot_project/server/package*.json ./server/
 RUN cd server && npm install
 
 # Copy the server's source code
-COPY chatbot_project/server/ ./server/
+COPY chatbot_project/server/server.js ./server/
 
 # Copy client application to the /app directory
 COPY chatbot_project/client/ ./client/
